@@ -3,5 +3,6 @@ module Types
     field :add_skill, mutation: Mutations::AddSkill
     field :add_user, mutation: Mutations::AddUser
     field :sign_in_user, mutation: Mutations::SignInUser
+    field :add_comment, mutation: Mutations::AddComment
   end
 end
