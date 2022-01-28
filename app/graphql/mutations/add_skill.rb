@@ -5,10 +5,16 @@ module Mutations
     field :skill, Types::SkillType, null: false
 
     def resolve(params:)
-      skill_params = Hash params
+      language = params[:language]
+      title = params[:title]
+      user = AuthToken.verify(params[:token])
 
       begin
-        skill = Skill.create!(skill_params)
+        skill = Skill.new(language: language,
+                          title: title,
+                          user: user)
+
+        skill.save
 
         { skill: skill }
       rescue ActiveRecord::RecordInvalid => e
