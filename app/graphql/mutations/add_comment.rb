@@ -1,13 +1,16 @@
 module Mutations
   class AddComment < Mutations::BaseMutation
     argument :params, Types::Input::CommentInputType, required: true
+    argument :authenticate, Types::Input::AuthenticateInputType, required: true
 
     field :comment, Types::CommentType, null: false
 
-    def resolve(params:)
+    def resolve(params:, authenticate:)
       skill = Skill.find(params[:skill_id])
       body = params[:body]
-      user = AuthToken.verify(params[:token])
+      token = authenticate.to_h[:token]
+      user = AuthToken.verify(token)
+      
       if user
         begin
           comment = Comment.new(
