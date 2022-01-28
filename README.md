@@ -63,7 +63,9 @@ query {
 }
 
 mutation {
-  addSkill(input: { params: { title: "", language: "", status: 0, token: ""}}) {
+  addSkill(input: {
+  authenticate: { token: "" },
+  params: { title: "", language: "", status: 0 }}) {
     skill {
       id
       title
@@ -101,7 +103,8 @@ mutation {
 
 mutation {
   addComment(input: {
-    params: { body: "", skillId: 0, token: ""}
+    authenticate: { token: "" },
+    params: { body: "", skillId: 0 }
   }) {
     comment {
       body
