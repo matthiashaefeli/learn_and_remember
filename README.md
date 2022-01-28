@@ -88,7 +88,7 @@ mutation {
 
 mutation {
   signInUser(input: { params: { name: "", email: "", password: "" }}) {
-		authenticate {
+    authenticate {
       token
     }
     user {
@@ -106,7 +106,7 @@ mutation {
     comment {
       body
       skillId
-				userId
+      userId
     }
   }
 }
