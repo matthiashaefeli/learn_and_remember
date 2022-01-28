@@ -7,13 +7,16 @@ module Mutations
     def resolve(params:)
       language = params[:language]
       title = params[:title]
+      status = params[:status]
       user = AuthToken.verify(params[:token])
 
       begin
         skill = Skill.new(language: language,
                           title: title,
+                          status: status,
                           user: user)
 
+                          binding.pry
         skill.save
 
         { skill: skill }
