@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 2022_01_27_222206) do
     t.string "title"
     t.string "language"
     t.integer "user_id"
+    t.boolean "public"
+    t.integer "status", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

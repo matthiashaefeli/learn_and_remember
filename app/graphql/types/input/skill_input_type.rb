@@ -4,6 +4,7 @@ module Types
       argument :title, String, required: true
       argument :language, String, required: true
       argument :token, String, required: true
+      argument :status, Integer, required: true
     end
   end
 end
