@@ -25,6 +25,7 @@ Things you may want to cover:
 
 Graphql queries
 
+```
 query {
   fetchSkills {
     id
@@ -109,3 +110,4 @@ mutation {
     }
   }
 }
+```
