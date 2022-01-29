@@ -9,8 +9,8 @@ module Mutations
       skill = Skill.find(params[:skill_id])
       body = params[:body]
       token = authenticate.to_h[:token]
-      user = AuthToken.verify(token)
-      
+      user = AuthToken.verified_user(token)
+
       if user
         begin
           comment = Comment.new(
