@@ -8,7 +8,7 @@ module Mutations
     def resolve(params:, authenticate:)
       skill_params = params.to_h
       token = authenticate.to_h[:token]
-      user = AuthToken.verify(token)
+      user = AuthToken.verified_user(token)
 
       if user
         begin

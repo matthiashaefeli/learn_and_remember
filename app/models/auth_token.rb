@@ -4,13 +4,18 @@ class AuthToken
   end
 
   def self.token(user)
-    payload = {user_id: user.id}
-    JsonWebToken.sign(payload, key: key)
+    payload = { user_id: user.id }
+    JWT.encode(payload, key, 'HS256')
   end
 
-  def self.verify(token)
-    result = JsonWebToken.verify(token, key: key)
-    return nil if result[:error]
-    User.find_by(id: result[:ok][:user_id])
+  def self.verified_user(token)
+    begin
+      decoded_array = JWT.decode(token, key, true, { algorithm: 'HS256' })
+      payload = decoded_array.first
+    rescue #JWT::VerificationError
+      return nil
+    end
+
+    User.find(payload['user_id'])
   end
 end
