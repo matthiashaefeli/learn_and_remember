@@ -44,8 +44,6 @@ gem 'jwt'
 
 gem 'valid_email2'
 
-gem 'rubocop-rails', require: false
-
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
@@ -55,6 +53,16 @@ group :development do
   gem 'dotenv-rails'
   gem 'graphiql-rails'
   gem 'pry'
+
+  gem "pre-commit", require: false
+  gem "rubocop", require: false
+  gem 'brakeman', :require => false
+  gem 'ruby_parser', '~> 3.17'
+
+  gem "rspec-rails"
+  gem "factory_bot_rails"
+  gem "faker"
+
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
