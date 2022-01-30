@@ -13,6 +13,7 @@ module Mutations
       if user
         begin
           skill = Skill.new(skill_params)
+          binding.pry
           skill.user = user
           skill.save
 
