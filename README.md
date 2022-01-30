@@ -30,7 +30,14 @@ query {
   fetchSkills {
     id
     title
-    language
+    language {
+    	name
+    }
+    user {
+      name
+      email
+      verified
+    }
     status
   }
 }
@@ -39,39 +46,77 @@ query {
   fetchComments {
     id
     body
-    skillId
-    userId
+    skill {
+      	title
+      	language {
+          name
+        }
+      	user {
+          name
+          email
+        }
+      }
+    user {
+      name
+      email
+    }
   }
 }
 
 query {
-  fetchComment(id: 0) {
+  fetchComment(id: 1) {
     id
     body
-    skillId
-    userId
+    skill {
+      	title
+      	language {
+          name
+        }
+      	user {
+          name
+          email
+        }
+      }
+    user {
+      name
+      email
+    }
   }
 }
 
 query {
-  fetchSkill(id: 0) {
+  fetchSkill(id: 2) {
     id
     title
-    language
     status
+		language {
+      name
+    }
+    user {
+      name
+      email
+      verified
+    }
   }
 }
 
 mutation {
-  addSkill(input: {
-  authenticate: { token: "" },
-  params: { title: "", language: "", status: 0 }}) {
+  addSkill(input: { authenticate: { token: "" }, 
+    								params: { title: "GraphQL notes",
+    													languageId: 1,
+    													status: 2 }}) {
     skill {
-      id
-      title
-      language
-      userId
-      status
+    id
+    title
+    status
+		language {
+      name
+    }
+    user {
+      name
+      email
+      verified
+    }
     }
   }
 }
@@ -90,12 +135,13 @@ mutation {
 
 mutation {
   signInUser(input: { params: { name: "", email: "", password: "" }}) {
-    authenticate {
+		authenticate {
       token
     }
     user {
       name
       email
+      verified
     }
   }
 }
@@ -104,12 +150,13 @@ mutation {
 mutation {
   addComment(input: {
     authenticate: { token: "" },
-    params: { body: "", skillId: 0 }
+    params: { body: "",
+      				skillId: 16 }
   }) {
     comment {
       body
       skillId
-      userId
+				userId
     }
   }
 }
