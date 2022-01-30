@@ -56,6 +56,12 @@ group :development do
 
   gem "pre-commit", require: false
   gem "rubocop", require: false
+  gem 'brakeman', :require => false
+  gem 'ruby_parser', '~> 3.17'
+
+  gem "rspec-rails"
+  gem "factory_bot_rails"
+  gem "faker"
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end

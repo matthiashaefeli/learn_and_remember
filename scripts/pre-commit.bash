@@ -2,6 +2,7 @@
 
 echo "Running pre-commit hook"
 ./scripts/run-rubocop.bash
+./scripts/run-brakeman.bash
 
 # $? stores exit value of the last command
 if [ $? -ne 0 ]; then
