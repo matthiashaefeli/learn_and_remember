@@ -240,9 +240,6 @@ GEM
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.1.0)
-    valid_email2 (4.0.1)
-      activemodel (>= 3.2)
-      mail (~> 2.5)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -273,7 +270,6 @@ DEPENDENCIES
   ruby_parser (~> 3.17)
   sass-rails
   tzinfo-data
-  valid_email2
 
 RUBY VERSION
    ruby 3.1.0p0
