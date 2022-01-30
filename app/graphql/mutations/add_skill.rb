@@ -11,18 +11,17 @@ module Mutations
       skill_params = params.to_h
       token = authenticate.to_h[:token]
       user = AuthToken.verified_user(token)
+      return unless user
 
-      if user
-        begin
-          skill = Skill.new(skill_params)
-          skill.user = user
-          skill.save
+      begin
+        skill = Skill.new(skill_params)
+        skill.user = user
+        skill.save
 
-          { skill: }
-        rescue ActiveRecord::RecordInvalid => e
-          GraphQL::ExecutionError.new("Invalid attributes for #{e.record.class}:"\
-            " #{e.record.errors.full_messages.join(', ')}")
-        end
+        { skill: }
+      rescue ActiveRecord::RecordInvalid => e
+        GraphQL::ExecutionError.new("Invalid attributes for #{e.record.class}:"\
+          " #{e.record.errors.full_messages.join(', ')}")
       end
     end
   end
