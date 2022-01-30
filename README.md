@@ -167,3 +167,6 @@ mutation {
   }
 }
 ```
+# Rubocop
+
+rubocop --require rubocop-rails

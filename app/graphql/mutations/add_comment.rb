@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Mutations
   class AddComment < Mutations::BaseMutation
     argument :params, Types::Input::CommentInputType, required: true
@@ -10,21 +12,20 @@ module Mutations
       body = params[:body]
       token = authenticate.to_h[:token]
       user = AuthToken.verified_user(token)
+      return unless user
 
-      if user
-        begin
-          comment = Comment.new(
-            body: body,
-            skill: skill,
-            user: user
-          )
-          comment.save
+      begin
+        comment = Comment.new(
+          body:,
+          skill:,
+          user:
+        )
+        comment.save
 
-          { comment: comment }
-        rescue ActiveRecord::RecordInvalid => e
-          GraphQL::ExecutionError.new("Invalid attributes for #{e.record.class}:"\
-            " #{e.record.errors.full_messages.join(', ')}")
-        end
+        { comment: }
+      rescue ActiveRecord::RecordInvalid => e
+        GraphQL::ExecutionError.new("Invalid attributes for #{e.record.class}:"\
+          " #{e.record.errors.full_messages.join(', ')}")
       end
     end
   end

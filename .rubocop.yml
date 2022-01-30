@@ -1,0 +1,17 @@
+require: rubocop-rails
+AllCops:
+  Exclude:
+    - 'db/seeds.rb'
+    - 'db/schema.rb'
+    - 'db/migrate/*'
+    - 'config/**/*'
+    - 'config.ru'
+    - 'bin/**/*'
+    - 'app/mailers/application_mailer.rb'
+    - 'app/jobs/application_job.rb'
+    - 'app/graphql/learn_and_remember_schema.rb'
+    - 'app/controllers/graphql_controller.rb'
+    - 'Gemfile'
+    - 'Rakefile'
+Style/Documentation:
+  Enabled: false

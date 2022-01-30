@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Queries
   class FetchSkill < Queries::BaseQuery
     type Types::SkillType, null: false
