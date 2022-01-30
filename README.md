@@ -85,7 +85,7 @@ query {
 }
 
 query {
-  fetchSkill(id: 2) {
+  fetchSkill(id: 1) {
     id
     title
     status
@@ -97,11 +97,17 @@ query {
       email
       verified
     }
+    comments {
+      body
+      user {
+        name
+      }
+    }
   }
 }
 
 mutation {
-  addSkill(input: { authenticate: { token: "" }, 
+  addSkill(input: { authenticate: { token: "" },
     								params: { title: "GraphQL notes",
     													languageId: 1,
     													status: 2 }}) {
