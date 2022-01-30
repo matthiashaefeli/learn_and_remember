@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Mutations
   class AddSkill < Mutations::BaseMutation
     argument :params, Types::Input::SkillInputType, required: true
@@ -13,11 +15,10 @@ module Mutations
       if user
         begin
           skill = Skill.new(skill_params)
-          binding.pry
           skill.user = user
           skill.save
 
-          { skill: skill }
+          { skill: }
         rescue ActiveRecord::RecordInvalid => e
           GraphQL::ExecutionError.new("Invalid attributes for #{e.record.class}:"\
             " #{e.record.errors.full_messages.join(', ')}")

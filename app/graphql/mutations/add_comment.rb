@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Mutations
   class AddComment < Mutations::BaseMutation
     argument :params, Types::Input::CommentInputType, required: true
@@ -14,13 +16,13 @@ module Mutations
       if user
         begin
           comment = Comment.new(
-            body: body,
-            skill: skill,
-            user: user
+            body:,
+            skill:,
+            user:
           )
           comment.save
 
-          { comment: comment }
+          { comment: }
         rescue ActiveRecord::RecordInvalid => e
           GraphQL::ExecutionError.new("Invalid attributes for #{e.record.class}:"\
             " #{e.record.errors.full_messages.join(', ')}")

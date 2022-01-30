@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class AuthToken
   def self.key
-    ENV["JWT_KEY"]
+    ENV['JWT_KEY']
   end
 
   def self.token(user)
@@ -12,7 +14,7 @@ class AuthToken
     begin
       decoded_array = JWT.decode(token, key, true, { algorithm: 'HS256' })
       payload = decoded_array.first
-    rescue #JWT::VerificationError
+    rescue StandardError # JWT::VerificationError
       return nil
     end
 

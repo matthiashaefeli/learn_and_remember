@@ -1,4 +1,7 @@
-module Queries
+# frozen_string_literal: true
+
+module
+   Queries
   class FetchComment < Queries::BaseQuery
     type Types::CommentType, null: false
     argument :id, ID, required: true
