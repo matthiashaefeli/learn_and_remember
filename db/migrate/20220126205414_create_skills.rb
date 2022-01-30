@@ -4,7 +4,6 @@ class CreateSkills < ActiveRecord::Migration[7.0]
       t.string :title
       t.integer :language_id
       t.integer :user_id
-      t.boolean :public
       t.integer :status, default: 0
 
       t.timestamps
