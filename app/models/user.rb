@@ -8,7 +8,7 @@ class User < ApplicationRecord
   validate :email_valid?
 
   def email_valid?
-    return if email.match(/\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i)
+    return if email&.match(/\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i)
 
     errors.add :email, ': not valid'
   end
