@@ -13,6 +13,10 @@
 # it.
 #
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+require 'simplecov'
+SimpleCov.start
+
+# Previous content of test helper now starts here
 require 'dotenv'
 Dotenv.load('.env')
 require_relative 'support/factory_bot'
