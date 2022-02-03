@@ -25,7 +25,7 @@ RSpec.describe Comment, type: :model do
 
     it 'is invalid without a body' do
       comment = Comment.new(user:, skill:)
-      expect(comment).to be_valid
+      expect(comment).to_not be_valid
     end
   end
 end
