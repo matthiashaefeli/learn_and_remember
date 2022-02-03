@@ -25,6 +25,14 @@ module Queries
         expect(skill_data['user']['name']).to eq user.name
         expect(skill_data['comments']).to be_instance_of Array
       end
+
+      it 'can not fetch a skill' do
+        post '/graphql',
+             params: { query: query(skill_id: 150) }
+
+        skill_data = JSON.parse(response.body)['errors'][0]['message']
+        expect(skill_data).to eq 'Skill does not exist.'
+      end
     end
 
     def query(skill_id:)

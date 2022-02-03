@@ -25,6 +25,14 @@ module Queries
         expect(comment_data['skill']['language']['name']).to eq language.name
         expect(comment_data['user']['name']).to eq user.name
       end
+
+      it 'can not fetch a comment' do
+        post '/graphql',
+             params: { query: query(comment_id: 150) }
+
+        comment_data = JSON.parse(response.body)['errors'][0]['message']
+        expect(comment_data).to eq 'Comment does not exist.'
+      end
     end
 
     def query(comment_id:)
