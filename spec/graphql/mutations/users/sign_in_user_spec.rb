@@ -6,6 +6,7 @@ module Mutations
   module Users
     RSpec.describe SignInUser, type: :request do
       let(:user) { create(:user) }
+
       describe '.resolve' do
         it 'sign in a user' do
           post '/graphql', params: { query: query(name: user.name, email: user.email, password: user.password) }
@@ -20,6 +21,13 @@ module Mutations
           expect(authenticate).to include(
             'token' => be_present
           )
+        end
+
+        it 'can not sign in a user' do
+          post '/graphql', params: { query: query(name: user.name, email: 'other_email', password: user.password) }
+          json = JSON.parse(response.body)
+          user = json['data']['signInUser']
+          expect(user).to be_nil
         end
       end
 
