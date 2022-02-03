@@ -18,8 +18,12 @@ AllCops:
 Style/Documentation:
   Enabled: false
 Metrics/MethodLength:
-  Max: 20
+  Max: 25
+  Exclude:
+   - 'spec/graphql/mutations/**/*'
 Metrics/BlockLength:
   Max: 30
   Exclude:
     - 'spec/graphql/mutations/**/*'
+Metrics/AbcSize:
+  Max: 20

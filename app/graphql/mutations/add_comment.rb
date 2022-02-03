@@ -8,7 +8,12 @@ module Mutations
     field :comment, Types::CommentType, null: false
 
     def resolve(params:, authenticate:)
-      skill = Skill.find(params[:skill_id])
+      begin
+        skill = Skill.find(params[:skill_id])
+      rescue ActiveRecord::RecordNotFound
+        return GraphQL::ExecutionError.new("Couldn't find skill with id:#{params[:skill_id]}")
+      end
+
       body = params[:body]
       token = authenticate.to_h[:token]
       user = AuthToken.verified_user(token)
@@ -20,7 +25,7 @@ module Mutations
           skill:,
           user:
         )
-        comment.save
+        comment.save!
 
         { comment: }
       rescue ActiveRecord::RecordInvalid => e
