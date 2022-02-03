@@ -4,6 +4,6 @@ require 'faker'
 
 FactoryBot.define do
   factory :language do
-    name { Faker::Creature::Animal }
+    name { Faker::Games::Zelda.character }
   end
 end
