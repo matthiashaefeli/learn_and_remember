@@ -12,6 +12,7 @@ module Mutations
     RSpec.describe AddSkill, type: :request do
       let(:language) { create(:language) }
       let(:user) { create(:user) }
+
       describe '.resolve' do
         it 'creates a skill' do
           token = get_token(user)
@@ -19,6 +20,15 @@ module Mutations
             post '/graphql',
                  params: { query: query(token:, title: 'title_test', language_id: language.id, status: 0) }
           end.to change { Skill.count }.by(1)
+        end
+
+        it 'return error if title missing' do
+          token = get_token(user)
+          post '/graphql',
+               params: { query: query(token:, title: '', language_id: language.id, status: 0) }
+
+          error_response = JSON.parse(response.body)['errors'][0]['message']
+          expect(error_response).to eq 'Invalid attributes for Skill: Title : not valid'
         end
       end
 

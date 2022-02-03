@@ -30,3 +30,4 @@
 
 # ignore env files
 /.env
+coverage
