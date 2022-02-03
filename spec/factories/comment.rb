@@ -3,7 +3,7 @@
 require 'faker'
 
 FactoryBot.define do
-  factory :skill do
-    title { Faker::Movies::Ghostbusters.quote }
+  factory :comment do
+    body { Faker::Movies::BackToTheFuture.quote }
   end
 end
