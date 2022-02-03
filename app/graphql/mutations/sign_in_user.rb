@@ -11,19 +11,14 @@ module Mutations
       email = params[:email]
       name = params[:name]
 
-      begin
-        user = User.find_by(email:, name:)
-        return unless user
-        return unless user.authenticate(params[:password])
+      user = User.find_by(email:, name:)
+      return unless user
+      return unless user.authenticate(params[:password])
 
-        {
-          authenticate: { token: AuthToken.token(user) },
-          user:
-        }
-      rescue ActiveRecord::RecordInvalid => e
-        GraphQL::ExecutionError.new("Invalid attributes for #{e.record.class}:"\
-          " #{e.record.errors.full_messages.join(', ')}")
-      end
+      {
+        authenticate: { token: AuthToken.token(user) },
+        user:
+      }
     end
   end
 end
