@@ -16,7 +16,7 @@ module Mutations
       begin
         skill = Skill.new(skill_params)
         skill.user = user
-        skill.save
+        skill.save!
 
         { skill: }
       rescue ActiveRecord::RecordInvalid => e

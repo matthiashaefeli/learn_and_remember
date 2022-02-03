@@ -24,7 +24,7 @@ RSpec.describe Skill, type: :model do
 
     it 'is invalid without a title' do
       skill = Skill.new(language:, user:)
-      expect(skill).to be_valid
+      expect(skill).to_not be_valid
     end
   end
 end
