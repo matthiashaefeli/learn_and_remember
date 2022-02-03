@@ -339,7 +339,7 @@
           null,
           1,
           1,
-          11,
+          12,
           null,
           null
         ]
@@ -352,7 +352,7 @@
           null,
           1,
           1,
-          6,
+          7,
           null,
           null
         ]
@@ -365,9 +365,9 @@
           null,
           1,
           1,
-          15,
-          15,
-          15,
+          16,
+          16,
+          16,
           null,
           null
         ]
@@ -944,6 +944,103 @@
           null
         ]
       },
+      "/Users/matyou/Documents/projects/personal/learn_and_remember/spec/graphql/queries/fetch_skill_spec.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          2,
+          2,
+          2,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/matyou/Documents/projects/personal/learn_and_remember/app/graphql/queries/fetch_skill.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/matyou/Documents/projects/personal/learn_and_remember/app/graphql/queries/base_query.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/matyou/Documents/projects/personal/learn_and_remember/spec/graphql/queries/fetch_skills_spec.rb": {
+        "lines": [
+
+        ]
+      },
       "/Users/matyou/Documents/projects/personal/learn_and_remember/spec/models/comment_spec.rb": {
         "lines": [
           null,
@@ -1052,7 +1149,7 @@
           1,
           null,
           1,
-          11,
+          12,
           null,
           2,
           null,
@@ -1104,7 +1201,7 @@
           1,
           null,
           1,
-          20,
+          21,
           null,
           1,
           null,
@@ -1120,16 +1217,16 @@
           null,
           null,
           1,
-          14,
-          14,
-          14,
-          14,
+          15,
+          15,
+          15,
+          15,
           null,
           null,
           null,
-          14,
+          15,
           null,
-          14,
+          15,
           null,
           0,
           null,
@@ -1140,7 +1237,7 @@
           null,
           null,
           1,
-          14,
+          15,
           null,
           0,
           0,
@@ -1152,7 +1249,7 @@
           null,
           0,
           null,
-          14,
+          15,
           null,
           0,
           null,
@@ -1277,37 +1374,6 @@
           null
         ]
       },
-      "/Users/matyou/Documents/projects/personal/learn_and_remember/app/graphql/queries/base_query.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/matyou/Documents/projects/personal/learn_and_remember/app/graphql/queries/fetch_skill.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          0,
-          null,
-          0,
-          null,
-          0,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
       "/Users/matyou/Documents/projects/personal/learn_and_remember/app/graphql/queries/fetch_comments.rb": {
         "lines": [
           null,
@@ -1384,6 +1450,6 @@
         ]
       }
     },
-    "timestamp": 1643852694
+    "timestamp": 1643854505
   }
 }
