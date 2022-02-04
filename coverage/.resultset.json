@@ -352,7 +352,7 @@
           null,
           1,
           1,
-          14,
+          15,
           null,
           null
         ]
@@ -365,7 +365,7 @@
           null,
           1,
           1,
-          9,
+          11,
           null,
           null
         ]
@@ -378,9 +378,9 @@
           null,
           1,
           1,
-          18,
-          18,
-          18,
+          19,
+          19,
+          19,
           null,
           null
         ]
@@ -1211,6 +1211,78 @@
           null
         ]
       },
+      "/Users/matyou/Documents/projects/personal/learn_and_remember/spec/graphql/queries/fetch_skills_spec.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/matyou/Documents/projects/personal/learn_and_remember/app/graphql/queries/fetch_skills.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/matyou/Documents/projects/personal/learn_and_remember/spec/models/comment_spec.rb": {
         "lines": [
           null,
@@ -1319,7 +1391,7 @@
           1,
           null,
           1,
-          14,
+          16,
           null,
           2,
           null,
@@ -1371,7 +1443,7 @@
           1,
           null,
           1,
-          23,
+          24,
           null,
           1,
           null,
@@ -1387,16 +1459,16 @@
           null,
           null,
           1,
-          19,
-          19,
-          19,
-          19,
+          20,
+          20,
+          20,
+          20,
           null,
           null,
           null,
-          19,
+          20,
           null,
-          19,
+          20,
           null,
           0,
           null,
@@ -1407,7 +1479,7 @@
           null,
           null,
           1,
-          19,
+          20,
           null,
           0,
           0,
@@ -1419,7 +1491,7 @@
           null,
           0,
           null,
-          19,
+          20,
           null,
           0,
           null,
@@ -1529,21 +1601,6 @@
           null
         ]
       },
-      "/Users/matyou/Documents/projects/personal/learn_and_remember/app/graphql/queries/fetch_skills.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          0,
-          null,
-          null,
-          null
-        ]
-      },
       "/Users/matyou/Documents/projects/personal/learn_and_remember/app/models/auth_token.rb": {
         "lines": [
           null,
@@ -1583,6 +1640,6 @@
         ]
       }
     },
-    "timestamp": 1644009566
+    "timestamp": 1644010189
   }
 }

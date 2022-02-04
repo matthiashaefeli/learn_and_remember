@@ -16,7 +16,7 @@ module Queries
     let!(:comment2) { create(:comment, user:, skill:) }
 
     describe '.resolve' do
-      it 'fetch a comment' do
+      it 'fetch comments' do
         post '/graphql',
              params: { query: }
 
