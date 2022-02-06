@@ -9,6 +9,7 @@ module Types
     field :fetch_skills, resolver: Queries::FetchSkills
     field :fetch_skill, resolver: Queries::FetchSkill
     field :fetch_skills_by_user, resolver: Queries::FetchSkillsByUser
+    field :fetch_skills_by_status, resolver: Queries::FetchSkillsByStatus
     field :fetch_comments, resolver: Queries::FetchComments
     field :fetch_comment, resolver: Queries::FetchComment
   end
