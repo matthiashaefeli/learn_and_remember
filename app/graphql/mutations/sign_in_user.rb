@@ -12,7 +12,7 @@ module Mutations
       name = params[:name]
 
       user = User.find_by(email:, name:)
-      return unless user
+      return unless user&.verified
       return unless user.authenticate(params[:password])
 
       {

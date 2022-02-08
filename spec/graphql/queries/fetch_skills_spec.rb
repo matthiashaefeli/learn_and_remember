@@ -10,7 +10,7 @@ end
 module Queries
   RSpec.describe FetchSkills, type: :request do
     let(:language) { create(:language) }
-    let(:user) { create(:user) }
+    let(:user) { create(:user, verified: true) }
     let!(:skill1) { create(:skill, user:, language:) }
     let!(:skill2) { create(:skill, user:, language:) }
 

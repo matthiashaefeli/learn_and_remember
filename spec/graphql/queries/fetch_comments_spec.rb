@@ -10,7 +10,7 @@ end
 module Queries
   RSpec.describe FetchComments, type: :request do
     let(:language) { create(:language) }
-    let(:user) { create(:user) }
+    let(:user) { create(:user, verified: true) }
     let(:skill) { create(:skill, user:, language:) }
     let!(:comment1) { create(:comment, user:, skill:) }
     let!(:comment2) { create(:comment, user:, skill:) }

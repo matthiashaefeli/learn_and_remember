@@ -11,7 +11,7 @@ module Mutations
   module Skills
     RSpec.describe AddSkill, type: :request do
       let(:language) { create(:language) }
-      let(:user) { create(:user) }
+      let(:user) { create(:user, verified: true) }
 
       describe '.resolve' do
         it 'creates a skill' do
