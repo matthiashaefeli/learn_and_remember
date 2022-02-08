@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
-  let(:user) { create(:user) }
+  let(:user) { create(:user, verified: true) }
   let(:language) { create(:language) }
   let(:skill) { create(:skill, user:, language:) }
 

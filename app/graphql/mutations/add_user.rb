@@ -12,10 +12,7 @@ module Mutations
       begin
         user = User.create!(user_params)
 
-        {
-          authenticate: { token: AuthToken.token(user) },
-          user:
-        }
+        { user: }
       rescue ActiveRecord::RecordInvalid => e
         GraphQL::ExecutionError.new("Invalid attributes for #{e.record.class}:"\
           " #{e.record.errors.full_messages.join(', ')}")

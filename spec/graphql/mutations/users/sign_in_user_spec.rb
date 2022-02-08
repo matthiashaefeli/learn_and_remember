@@ -5,7 +5,8 @@ require 'rails_helper'
 module Mutations
   module Users
     RSpec.describe SignInUser, type: :request do
-      let(:user) { create(:user) }
+      let(:user) { create(:user, verified: true) }
+      let(:user2) { create(:user) }
 
       describe '.resolve' do
         it 'sign in a user' do
@@ -16,7 +17,7 @@ module Mutations
           expect(user).to include(
             'name' => be_present,
             'email' => be_present,
-            'verified' => false
+            'verified' => true
           )
           expect(authenticate).to include(
             'token' => be_present
@@ -25,6 +26,13 @@ module Mutations
 
         it 'can not sign in a user' do
           post '/graphql', params: { query: query(name: user.name, email: 'other_email', password: user.password) }
+          json = JSON.parse(response.body)
+          user = json['data']['signInUser']
+          expect(user).to be_nil
+        end
+
+        it 'user is not verified' do
+          post '/graphql', params: { query: query(name: user2.name, email: user2.email, password: user2.password) }
           json = JSON.parse(response.body)
           user = json['data']['signInUser']
           expect(user).to be_nil
