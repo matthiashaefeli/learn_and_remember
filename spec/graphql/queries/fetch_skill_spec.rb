@@ -21,7 +21,7 @@ module Queries
         skill_data = JSON.parse(response.body)['data']['fetchSkill']
         expect(skill_data['id']).to eq skill.id.to_s
         expect(skill_data['status']).to eq skill.status
-        expect(skill_data['language']['name']).to eq language.name
+        expect(skill_data['language']['label']).to eq language.label
         expect(skill_data['user']['name']).to eq user.name
         expect(skill_data['comments']).to be_instance_of Array
       end
@@ -43,7 +43,7 @@ module Queries
             title
             status
         		language {
-              name
+              label
             }
             user {
               name

@@ -22,7 +22,7 @@ module Queries
         comment_data = JSON.parse(response.body)['data']['fetchComment']
         expect(comment_data['id']).to eq comment.id.to_s
         expect(comment_data['skill']['title']).to eq skill.title
-        expect(comment_data['skill']['language']['name']).to eq language.name
+        expect(comment_data['skill']['language']['label']).to eq language.label
         expect(comment_data['user']['name']).to eq user.name
       end
 
@@ -44,7 +44,7 @@ module Queries
             skill {
               	title
               	language {
-                  name
+                  label
                 }
               	user {
                   name

@@ -32,7 +32,7 @@ module Queries
             title
             status
         		language {
-              name
+              label
             }
             user {
               name

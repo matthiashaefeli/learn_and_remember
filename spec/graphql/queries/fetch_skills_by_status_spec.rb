@@ -32,7 +32,7 @@ module Queries
           fetchSkillsByStatus(status: 1) {
             title
             language {
-              name
+              label
             }
             user {
               name

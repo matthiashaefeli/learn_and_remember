@@ -2,7 +2,6 @@
 
 module Types
   class LanguageType < Types::BaseObject
-    field :name, String, null: false
-    field :id, Int, null: false
+    field :label, String, null: false
   end
 end
