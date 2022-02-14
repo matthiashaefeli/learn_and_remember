@@ -26,8 +26,7 @@ module Queries
       <<~GQL
         query {
           fetchLanguages {
-            id
-            name
+            label
           }
         }
       GQL

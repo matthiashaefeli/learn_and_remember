@@ -5,7 +5,7 @@ module Queries
     type [Types::LanguageType], null: false
 
     def resolve
-      Language.all.order(name: :asc)
+      Language.all.order(label: :asc)
     end
   end
 end

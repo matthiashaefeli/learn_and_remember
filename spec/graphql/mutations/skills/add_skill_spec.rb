@@ -50,7 +50,7 @@ module Mutations
               title
               status
           		language {
-                name
+                label
               }
               user {
                 name

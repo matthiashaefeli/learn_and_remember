@@ -3,23 +3,6 @@ u1 = User.create(name: "name1", password: 'pass', email: "email1@email.com", ver
 u2 = User.create(name: "name2", password: 'pass', email: "email2@email.com", verified: true)
 u3 = User.create(name: 't', password: 't', email: 't@t.com', verified: true)
 
-5.times do |i|
-  Skill.create(title: "Skill #{i + 1}", user: u1, language: Language.all.sample)
-end
-
-5.times do |i|
-  Skill.create(title: "Skill #{i + 1}", language: Language.all.sample, user: u2)
-end
-
-5.times do |i|
-  Comment.create(body: "comment #{i + 1}", skill: Skill.all.sample, user: u1)
-end
-
-5.times do |i|
-  Comment.create(body: "comment #{i + 1}", skill: Skill.all.sample, user: u2)
-end
-
-
 lang = ['A.NET',
 'A-0 System',
 'A+ (A plus)',
@@ -149,8 +132,6 @@ lang = ['A.NET',
 'Cypher Query Language',
 'Cython',
 'CEEMAC',
-'D',
-'D',
 'Dart',
 'Darwin',
 'DataFlex',
@@ -168,8 +149,6 @@ lang = ['A.NET',
 'Dylan',
 'DYNAMO',
 'DAX (Data Analysis Expressions)',
-'E',
-'E',
 'Ease',
 'Easy PL/I',
 'EASYTRIEVE PLUS',
@@ -199,8 +178,6 @@ lang = ['A.NET',
 'EXEC 2',
 'Executable UML',
 'Ezhil',
-'F',
-'F',
 'F# (F sharp)',
 'F*',
 'Factor',
@@ -229,7 +206,6 @@ lang = ['A.NET',
 'Franz Lisp',
 'Futhark',
 'F-Script',
-'G',
 'Game Maker Language (Scripting language)',
 'GameMonkey Script',
 'GAMS (General Algebraic Modeling System)',
@@ -256,7 +232,6 @@ lang = ['A.NET',
 'GRASS',
 'Grasshopper',
 'Groovy (Apache Groovy)',
-'H',
 'Hack',
 'HAGGIS',
 'HAL/S',
@@ -276,7 +251,6 @@ lang = ['A.NET',
 'Hope',
 'Hume',
 'HyperTalk',
-'I',
 'Io',
 'Icon',
 'IBM Basic assembly language',
@@ -287,8 +261,6 @@ lang = ['A.NET',
 'Idris',
 'Inform',
 'ISLISP',
-'J',
-'J',
 'J# (J sharp)',
 'J++ (J plus plus)',
 'JADE',
@@ -312,8 +284,6 @@ lang = ['A.NET',
 'JScript .NET',
 'Julia',
 'Jython',
-'K',
-'K',
 'Kaleidoscope',
 'Karel',
 'KEE',
@@ -329,7 +299,6 @@ lang = ['A.NET',
 'KornShell',
 'Kodu',
 'Kv',
-'L',
 'LabVIEW',
 'Ladder',
 'LANSA',
@@ -416,7 +385,6 @@ lang = ['A.NET',
 'MuPAD',
 'Mutan',
 'Mystic Programming Language (MPL)',
-'N',
 'NASM',
 'Napier88',
 'Neko',
@@ -471,7 +439,6 @@ lang = ['A.NET',
 'Oxygene',
 'Oz',
 'P4',
-'P',
 'ParaSail',
 'PARI/GP',
 'Pascal',
@@ -522,15 +489,12 @@ lang = ['A.NET',
 'Pure Data',
 'PureScript',
 'Python',
-'Q',
 'Qalb',
 'Quantum Computation Language',
 'QtScript',
 'QuakeC',
 'QPL',
 'QL',
-'R',
-'R',
 'R++',
 'Racket',
 'Raku',
@@ -552,8 +516,6 @@ lang = ['A.NET',
 'RTL',
 'Ruby',
 'Rust',
-'S',
-'S',
 'S2',
 'S3',
 'S-Lang',
@@ -665,7 +627,6 @@ lang = ['A.NET',
 'Visual LISP',
 'Visual Objects',
 'Visual Prolog',
-'W',
 'WATFIV',
 'WebAssembly',
 'WebDNA',
@@ -673,7 +634,6 @@ lang = ['A.NET',
 'Winbatch',
 'Wolfram Language',
 'Wyvern',
-'X',
 'X++',
 'X10',
 'xBase++',
@@ -691,11 +651,9 @@ lang = ['A.NET',
 'XSharp',
 'XSLT',
 'Xtend',
-'Y',
 'Yorick',
 'YQL',
 'Yoix',
-'Z',
 'Z notation',
 'Z shell',
 'Zebra',
@@ -707,7 +665,7 @@ lang = ['A.NET',
 'Z++']
 
 lang.each do |l|
-  Language.create(name: l)
+  l=Language.create(label: l)
 end
 
 frameworks = ['ActiveVFP',
@@ -866,5 +824,21 @@ frameworks = ['ActiveVFP',
 'ZTemplates']
 
 frameworks.each do |f|
-  Language.create(name: f)
+  f=Language.create(label: f)
+end
+
+5.times do |i|
+  Skill.create(title: "Skill #{i + 1}", user: u1, language: Language.all.sample)
+end
+
+5.times do |i|
+  Skill.create(title: "Skill #{i + 1}", language: Language.all.sample, user: u2)
+end
+
+5.times do |i|
+  Comment.create(body: "comment #{i + 1}", skill: Skill.all.sample, user: u1)
+end
+
+5.times do |i|
+  Comment.create(body: "comment #{i + 1}", skill: Skill.all.sample, user: u2)
 end

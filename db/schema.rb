@@ -24,17 +24,16 @@ ActiveRecord::Schema.define(version: 2022_01_30_155441) do
   end
 
   create_table "languages", force: :cascade do |t|
-    t.string "name", null: false
+    t.string "label", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["name"], name: "index_languages_on_name", unique: true
+    t.index ["label"], name: "index_languages_on_label", unique: true
   end
 
   create_table "skills", force: :cascade do |t|
     t.string "title"
     t.integer "language_id"
     t.integer "user_id"
-    t.boolean "public"
     t.integer "status", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

@@ -34,7 +34,7 @@ module Queries
             skill {
               	title
               	language {
-                  name
+                  label
                 }
               	user {
                   name

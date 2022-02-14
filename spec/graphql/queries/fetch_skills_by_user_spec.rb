@@ -32,7 +32,7 @@ module Queries
           fetchSkillsByUser(userId: #{user_id}) {
             title
             language {
-              name
+              label
             }
             user {
               name
