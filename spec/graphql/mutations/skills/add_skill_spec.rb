@@ -18,21 +18,21 @@ module Mutations
           token = get_token(user)
           expect do
             post '/graphql',
-                 params: { query: query(token:, title: 'title_test', language_id: language.id, status: 0) }
+                 params: { query: query(token:, title: 'title_test', language: language.label, status: 0) }
           end.to change { Skill.count }.by(1)
         end
 
         it 'return error if title missing' do
           token = get_token(user)
           post '/graphql',
-               params: { query: query(token:, title: '', language_id: language.id, status: 0) }
+               params: { query: query(token:, title: '', language: language.label, status: 0) }
 
           error_response = JSON.parse(response.body)['errors'][0]['message']
           expect(error_response).to eq 'Invalid attributes for Skill: Title : not valid'
         end
       end
 
-      def query(token:, title:, language_id:, status:)
+      def query(token:, title:, language:, status:)
         <<~GQL
           mutation {
             addSkill(input: {
@@ -41,7 +41,7 @@ module Mutations
                 },
                 params: {
                   title: "#{title}",
-                  languageId: #{language_id},
+                  language: "#{language}",
                   status: #{status}
                 }
             }) {
