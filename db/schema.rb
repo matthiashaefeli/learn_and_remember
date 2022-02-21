@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2022_01_30_155441) do
 
   create_table "skills", force: :cascade do |t|
     t.string "title"
+    t.text "body"
     t.integer "language_id"
     t.integer "user_id"
     t.integer "status", default: 0

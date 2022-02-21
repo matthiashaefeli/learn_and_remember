@@ -41,6 +41,7 @@ module Queries
           fetchSkill(id: #{skill_id}) {
             id
             title
+            body
             status
         		language {
               label

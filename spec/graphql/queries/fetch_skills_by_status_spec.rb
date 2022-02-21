@@ -31,6 +31,7 @@ module Queries
         query {
           fetchSkillsByStatus(status: 1) {
             title
+            body
             language {
               label
             }
