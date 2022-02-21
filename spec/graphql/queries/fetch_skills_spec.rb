@@ -30,6 +30,7 @@ module Queries
           fetchSkills {
             id
             title
+            body
             status
         		language {
               label

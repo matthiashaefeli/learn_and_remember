@@ -31,6 +31,7 @@ module Queries
         query {
           fetchSkillsByUser(userId: #{user_id}) {
             title
+            body
             language {
               label
             }

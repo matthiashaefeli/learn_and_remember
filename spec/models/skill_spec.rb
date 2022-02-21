@@ -8,7 +8,7 @@ RSpec.describe Skill, type: :model do
 
   describe 'skill' do
     it 'is valid with valid attributes' do
-      skill = Skill.new(language:, user:, title: 'test')
+      skill = Skill.new(language:, user:, title: 'test', body: '<p>test<p>')
       expect(skill).to be_valid
     end
 

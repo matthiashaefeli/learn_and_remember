@@ -5,6 +5,7 @@ module Types
     field :id, ID, null: false
     field :user, UserType
     field :title, String, null: false
+    field :body, String, null: false
     field :language, LanguageType
     field :status, String, null: false
     field :comments, [CommentType]

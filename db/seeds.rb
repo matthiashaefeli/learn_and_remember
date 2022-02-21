@@ -828,11 +828,11 @@ frameworks.each do |f|
 end
 
 5.times do |i|
-  Skill.create(title: "Skill #{i + 1}", user: u1, language: Language.all.sample)
+  Skill.create(title: "Skill #{i + 1}", user: u1, language: Language.all.sample, body: '<p>this is my message<p>', status: 2)
 end
 
 5.times do |i|
-  Skill.create(title: "Skill #{i + 1}", language: Language.all.sample, user: u2)
+  Skill.create(title: "Skill #{i + 1}", language: Language.all.sample, user: u2, body: '<h1>uhhhhh<h1>', status: 2)
 end
 
 5.times do |i|
