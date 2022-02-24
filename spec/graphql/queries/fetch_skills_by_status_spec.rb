@@ -29,7 +29,7 @@ module Queries
     def query
       <<~GQL
         query {
-          fetchSkillsByStatus(status: 1) {
+          fetchSkillsByStatus(status: 1, page: 1) {
             title
             body
             language {

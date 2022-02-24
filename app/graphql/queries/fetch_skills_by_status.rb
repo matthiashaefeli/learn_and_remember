@@ -4,9 +4,12 @@ module Queries
   class FetchSkillsByStatus < Queries::BaseQuery
     type [Types::SkillType], null: false
     argument :status, ID, required: true
+    argument :page, ID, required: true
 
-    def resolve(status:)
-      Skill.where(status: status).order(created_at: :desc)
+    def resolve(status:, page:)
+      p = page.to_i
+      offset = p == 1 ? 0 : p * 10
+      Skill.where(status: status).limit(20).offset(offset).order(created_at: :desc)
     end
   end
 end
