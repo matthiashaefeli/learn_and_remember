@@ -11,8 +11,8 @@ module Queries
   RSpec.describe FetchSkillsByUser, type: :request do
     let(:language) { create(:language) }
     let(:user) { create(:user, verified: true) }
-    let!(:skill1) { create(:skill, user:, language:) }
-    let!(:skill2) { create(:skill, user:, language:) }
+    let!(:skill1) { create(:skill, user:, language:, status: 1) }
+    let!(:skill2) { create(:skill, user:, language:, status: 1) }
     let(:user2) { create(:user) }
     let!(:skill3) { create(:skill, user: user2, language:) }
 
@@ -29,7 +29,7 @@ module Queries
     def query(user_id:)
       <<~GQL
         query {
-          fetchSkillsByUser(userId: #{user_id}) {
+          fetchSkillsByUser(userId: #{user_id}, status: 1, page: 1) {
             title
             body
             language {
