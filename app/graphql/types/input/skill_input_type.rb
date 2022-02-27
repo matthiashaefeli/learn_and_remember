@@ -7,6 +7,7 @@ module Types
       argument :body, String, required: true
       argument :language, String, required: true
       argument :status, Integer, required: true
+      argument :id, Integer, required: false
     end
   end
 end
