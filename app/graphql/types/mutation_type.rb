@@ -7,5 +7,6 @@ module Types
     field :sign_in_user, mutation: Mutations::SignInUser
     field :add_comment, mutation: Mutations::AddComment
     field :delete_skill, mutation: Mutations::DeleteSkill
+    field :update_skill, mutation: Mutations::UpdateSkill
   end
 end

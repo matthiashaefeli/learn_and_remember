@@ -28,3 +28,7 @@ Metrics/BlockLength:
     - 'spec/graphql/queries/**/*'
 Metrics/AbcSize:
   Max: 20
+Metrics/ParameterLists:
+  Enabled: true
+  Exclude:
+    - 'spec/graphql/mutations/**/*'
