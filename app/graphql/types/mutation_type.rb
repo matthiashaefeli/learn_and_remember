@@ -8,5 +8,6 @@ module Types
     field :add_comment, mutation: Mutations::AddComment
     field :delete_skill, mutation: Mutations::DeleteSkill
     field :update_skill, mutation: Mutations::UpdateSkill
+    field :create_or_update_user_setting, mutation: Mutations::CreateOrUpdateUserSetting
   end
 end
