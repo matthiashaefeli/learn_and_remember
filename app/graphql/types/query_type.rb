@@ -14,5 +14,6 @@ module Types
     field :fetch_comments, resolver: Queries::FetchComments
     field :fetch_comment, resolver: Queries::FetchComment
     field :fetch_languages, resolver: Queries::FetchLanguages
+    field :fetch_user_settings, resolver: Queries::FetchUserSettings
   end
 end

@@ -379,9 +379,22 @@
           null,
           1,
           1,
-          29,
-          29,
-          29,
+          31,
+          31,
+          31,
+          null,
+          null
+        ]
+      },
+      "/Users/matyou/Documents/projects/personal/learn_and_remember/spec/factories/user_settings.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          2,
+          2,
+          2,
           null,
           null
         ]
@@ -1790,6 +1803,90 @@
           null
         ]
       },
+      "/Users/matyou/Documents/projects/personal/learn_and_remember/spec/graphql/queries/fetch_user_settings_spec.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          2,
+          2,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/matyou/Documents/projects/personal/learn_and_remember/app/graphql/queries/fetch_user_settings.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/matyou/Documents/projects/personal/learn_and_remember/app/graphql/types/user_settings_type.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/matyou/Documents/projects/personal/learn_and_remember/spec/models/comment_spec.rb": {
         "lines": [
           null,
@@ -1914,6 +2011,38 @@
           null
         ]
       },
+      "/Users/matyou/Documents/projects/personal/learn_and_remember/spec/models/user_setting_spec.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          2,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/matyou/Documents/projects/personal/learn_and_remember/app/models/user_setting.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
       "/Users/matyou/Documents/projects/personal/learn_and_remember/spec/models/user_spec.rb": {
         "lines": [
           null,
@@ -1957,7 +2086,7 @@
           1,
           null,
           1,
-          34,
+          36,
           null,
           1,
           null,
@@ -1973,16 +2102,16 @@
           null,
           null,
           1,
-          33,
-          33,
-          33,
-          33,
+          34,
+          34,
+          34,
+          34,
           null,
           null,
           null,
-          33,
+          34,
           null,
-          33,
+          34,
           null,
           0,
           null,
@@ -1993,7 +2122,7 @@
           null,
           null,
           1,
-          33,
+          34,
           null,
           0,
           0,
@@ -2005,7 +2134,7 @@
           null,
           0,
           null,
-          33,
+          34,
           null,
           0,
           null,
@@ -2117,6 +2246,7 @@
           1,
           1,
           1,
+          1,
           null,
           null
         ]
@@ -2160,6 +2290,6 @@
         ]
       }
     },
-    "timestamp": 1646001543
+    "timestamp": 1646353148
   }
 }
