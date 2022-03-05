@@ -450,7 +450,7 @@ lang = [
 'PCF',
 'PEARL',
 'PeopleCode',
-'React,'
+'React',
 'Perl',
 'PDL',
 'Pharo',
