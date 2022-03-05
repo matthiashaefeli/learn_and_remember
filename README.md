@@ -43,6 +43,13 @@ query {
 }
 
 query {
+  fetchLanguages {
+    name
+    id
+  }
+}
+
+query {
   fetchComments {
     id
     body
@@ -90,9 +97,10 @@ query {
     title
     status
 		language {
-      name
+      label
     }
     user {
+      id
       name
       email
       verified
@@ -106,17 +114,100 @@ query {
   }
 }
 
+query {
+  fetchSkillsByUser(userId: 3, status: 1, page: 1) {
+    title
+    language {
+    	label
+    }
+    status
+  }
+}
+query {
+  fetchSkillsByStatus(status: 2, page: 1) {
+    title
+    language {
+    	label
+    }
+    user {
+      name
+      email
+      verified
+    }
+    status
+  }
+}
+
+query {
+  fetchSkillsByLanguage(language: "Ruby", page: 1) {
+    title
+    body
+    language {
+      label
+    }
+    user {
+      name
+      email
+      verified
+    }
+    status
+  }
+}
+
+query {
+  fetchUserSettings(userId: 3) {
+    id
+    firstMonth
+    fiveMonth
+    year
+    user {
+      name
+      email
+      verified
+    }
+  }
+}
+
 mutation {
-  addSkill(input: { authenticate: { token: "" },
+  createOrUpdateUserSetting(input: {
+      authenticate: {
+        token: ""
+      },
+      params: {
+        firstMonth: false,
+        fiveMonth: true,
+        year: true
+      }
+  }) {
+    setting {
+      id
+      firstMonth
+      fiveMonth
+      year
+      user {
+        id
+        name
+        email
+        verified
+      }
+    }
+  }
+}
+
+mutation {
+  addSkill(input: { authenticate: { token: "" }, 
     								params: { title: "GraphQL notes",
-    													languageId: 1,
-    													status: 2 }}) {
+    													language: "Ruby",
+    													status: 2 }
+  									}
+  				)
+  	{
     skill {
     id
     title
     status
 		language {
-      name
+      label
     }
     user {
       name
@@ -128,7 +219,7 @@ mutation {
 }
 
 mutation {
-  addUser(input: { params: { name: "", email: "", password: "" }}) {
+  addUser(input: { params: { name: "username", email: "t20@t.com", password: "pass" }}) {
     authenticate {
       token
     }
@@ -140,7 +231,7 @@ mutation {
 }
 
 mutation {
-  signInUser(input: { params: { name: "", email: "", password: "" }}) {
+  signInUser(input: { params: { name: "name 1", email: "email1@email.com", password: "pass" }}) {
 		authenticate {
       token
     }
@@ -156,13 +247,29 @@ mutation {
 mutation {
   addComment(input: {
     authenticate: { token: "" },
-    params: { body: "",
-      				skillId: 16 }
+    params: { body: "comment body",
+      				skillId: 1 }
   }) {
     comment {
       body
-      skillId
-				userId
+      skill {
+        title
+      }
+			user {
+        email
+        name
+      }
+    }
+  }
+}
+
+mutation {
+  deleteSkill(input: {
+    authenticate: { token: "" },
+    skillId: 1
+  })  {
+    skill {
+      id
     }
   }
 }
