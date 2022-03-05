@@ -1,7 +1,4 @@
 
-u1 = User.create(name: "name1", password: 'pass', email: "email1@email.com", verified: true)
-u2 = User.create(name: "name2", password: 'pass', email: "email2@email.com", verified: true)
-u3 = User.create(name: 't', password: 't', email: 't@t.com', verified: true)
 
 lang = [
 'Html',
@@ -833,20 +830,4 @@ frameworks = ['ActiveVFP',
 
 frameworks.each do |f|
   f=Language.create(label: f)
-end
-
-5.times do |i|
-  Skill.create(title: "Skill #{i + 1}", user: u1, language: Language.all.sample, body: '<p>this is my message<p>', status: 2)
-end
-
-5.times do |i|
-  Skill.create(title: "Skill #{i + 1}", language: Language.all.sample, user: u2, body: '<h1>uhhhhh<h1>', status: 2)
-end
-
-5.times do |i|
-  Comment.create(body: "comment #{i + 1}", skill: Skill.all.sample, user: u1)
-end
-
-5.times do |i|
-  Comment.create(body: "comment #{i + 1}", skill: Skill.all.sample, user: u2)
 end
