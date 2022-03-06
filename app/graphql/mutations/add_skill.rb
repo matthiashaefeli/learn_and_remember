@@ -8,14 +8,19 @@ module Mutations
     field :skill, Types::SkillType, null: false
 
     def resolve(params:, authenticate:)
+      Rails.logger.info 'AddSkill Mutation: start resolve'
       token = authenticate.to_h[:token]
       user = AuthToken.verified_user(token)
+      Rails.logger.info 'AddSkill Mutation: User verified'
       return unless user
 
       begin
+        Rails.logger.info 'AddSkill Mutation: create skill'
         skill = Skill.new(skill_params(params.to_h, user))
+        Rails.logger.info "AddSkill Mutation: skill valid: #{skill.valid?}"
         skill.save!
 
+        Rails.logger.info "AddSkill Mutation: skill: #{skill}"
         { skill: }
       rescue ActiveRecord::RecordInvalid => e
         GraphQL::ExecutionError.new("Invalid attributes for #{e.record.class}:"\

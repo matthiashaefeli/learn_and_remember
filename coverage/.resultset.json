@@ -281,11 +281,6 @@
           null
         ]
       },
-      "/Users/matyou/Documents/projects/personal/learn_and_remember/config/initializers/assets.rb": {
-        "lines": [
-          1
-        ]
-      },
       "/Users/matyou/Documents/projects/personal/learn_and_remember/config/initializers/cors.rb": {
         "lines": [
           null,
@@ -2419,6 +2414,6 @@
         ]
       }
     },
-    "timestamp": 1646509557
+    "timestamp": 1646510546
   }
 }
