@@ -5,6 +5,7 @@ module Types
     field :add_skill, mutation: Mutations::AddSkill
     field :add_user, mutation: Mutations::AddUser
     field :sign_in_user, mutation: Mutations::SignInUser
+    field :verify_user, mutation: Mutations::VerifyUser
     field :add_comment, mutation: Mutations::AddComment
     field :delete_skill, mutation: Mutations::DeleteSkill
     field :update_skill, mutation: Mutations::UpdateSkill

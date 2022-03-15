@@ -11,7 +11,9 @@ module Mutations
       user_params = Hash params
       begin
         user = User.create!(user_params)
-        VerifyMailer.with(user: user).verify_email.deliver_later
+        user.verify_id = SecureRandom.uuid
+        user.save!
+        VerifyMailer.with(user:).verify_email.deliver_later
 
         { user: }
       rescue ActiveRecord::RecordInvalid => e
