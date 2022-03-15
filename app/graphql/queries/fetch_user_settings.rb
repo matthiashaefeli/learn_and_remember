@@ -6,7 +6,7 @@ module Queries
     argument :user_id, ID, required: true
 
     def resolve(user_id:)
-      UserSetting.where(user_id: user_id).order(created_at: :desc)
+      UserSetting.where(user_id: user_id).order(created_at: :desc) # rubocop:disable Style/HashSyntax
     end
   end
 end

@@ -2,8 +2,8 @@
 
 class VerifyMailer < ApplicationMailer
   def verify_email
-    user = params[:user]
+    @user = params[:user]
 
-    mail(to: user.email, subject: 'Please Verify Your Email')
+    mail(to: @user.email, subject: 'Please Verify Your Email')
   end
 end

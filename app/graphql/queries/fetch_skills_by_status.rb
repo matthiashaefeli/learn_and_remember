@@ -9,7 +9,7 @@ module Queries
     def resolve(status:, page:)
       p = page.to_i
       offset = p == 1 ? 0 : p * 10
-      Skill.where(status: status).limit(20).offset(offset).order(created_at: :desc)
+      Skill.where(status: status).limit(20).offset(offset).order(created_at: :desc) # rubocop:disable Style/HashSyntax
     end
   end
 end
