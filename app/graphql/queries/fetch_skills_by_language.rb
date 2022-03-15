@@ -10,7 +10,7 @@ module Queries
       p = page.to_i
       offset = p == 1 ? 0 : p * 10
       language = Language.find_by(label: language)
-      Skill.where(language: language).limit(20).offset(offset).order(created_at: :desc)
+      Skill.where(language: language).limit(20).offset(offset).order(created_at: :desc) # rubocop:disable Style/HashSyntax
     end
   end
 end
