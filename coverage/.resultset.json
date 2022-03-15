@@ -163,18 +163,7 @@
           1,
           null,
           null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          0,
-          null,
-          null,
-          null
+          1
         ]
       },
       "/Users/matyou/Documents/projects/personal/learn_and_remember/config/application.rb": {
@@ -390,9 +379,10 @@
           null,
           1,
           1,
-          35,
-          35,
-          35,
+          36,
+          36,
+          36,
+          36,
           null,
           null
         ]
@@ -765,16 +755,11 @@
           2,
           2,
           2,
-          2,
-          2,
           null,
           null,
           2,
           2,
-          2,
-          2,
           null,
-          1,
           1,
           1,
           1,
@@ -1228,6 +1213,9 @@
           2,
           null,
           2,
+          1,
+          1,
+          1,
           null,
           1,
           1,
@@ -1355,6 +1343,87 @@
           12,
           null,
           null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/matyou/Documents/projects/personal/learn_and_remember/spec/graphql/mutations/users/verify_user_spec.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          2,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/matyou/Documents/projects/personal/learn_and_remember/app/graphql/mutations/verify_user.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/matyou/Documents/projects/personal/learn_and_remember/app/graphql/types/input/verify_user_input_type.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
           null,
           null,
           null
@@ -2026,6 +2095,40 @@
           null
         ]
       },
+      "/Users/matyou/Documents/projects/personal/learn_and_remember/spec/mailers/verify_mailer_spec.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/matyou/Documents/projects/personal/learn_and_remember/app/mailers/verify_mailer.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          0,
+          null,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/matyou/Documents/projects/personal/learn_and_remember/app/mailers/application_mailer.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
       "/Users/matyou/Documents/projects/personal/learn_and_remember/spec/models/comment_spec.rb": {
         "lines": [
           null,
@@ -2135,13 +2238,13 @@
           1,
           null,
           1,
-          32,
+          30,
           null,
-          4,
+          3,
           null,
           null,
           1,
-          32,
+          30,
           null,
           3,
           null,
@@ -2225,7 +2328,7 @@
           1,
           null,
           1,
-          40,
+          43,
           null,
           1,
           null,
@@ -2241,16 +2344,16 @@
           null,
           null,
           1,
-          38,
-          38,
-          38,
-          38,
+          39,
+          39,
+          39,
+          39,
           null,
           null,
           null,
-          38,
+          39,
           null,
-          38,
+          39,
           null,
           0,
           null,
@@ -2261,7 +2364,7 @@
           null,
           null,
           1,
-          38,
+          39,
           null,
           0,
           0,
@@ -2273,7 +2376,7 @@
           null,
           0,
           null,
-          38,
+          39,
           null,
           0,
           null,
@@ -2364,6 +2467,7 @@
           1,
           1,
           1,
+          1,
           null,
           null
         ]
@@ -2430,6 +2534,6 @@
         ]
       }
     },
-    "timestamp": 1646586252
+    "timestamp": 1647304499
   }
 }
