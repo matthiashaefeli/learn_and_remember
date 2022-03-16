@@ -1,0 +1,12 @@
+<h1>Easy Remind Me</h1>
+<h3>You learned following <%= @year_number %> Years ago:</h3>
+<br>
+<p><%= @skill.title %></p>
+<p>language: <%= @skill.language.label %></p>
+<br />
+<%= sanitize @skill.body %>
+<br />
+<p>Comments:</p>
+<% @skill.comments.each do |comment| %>
+  <%= sanitize comment.body %>
+<% end %>
