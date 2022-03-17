@@ -3,6 +3,7 @@
 class User < ApplicationRecord
   has_secure_password
 
+  has_many :user_setting, dependent: :destroy
   validates :name, :password_digest, presence: true
   validates :email, presence: true, uniqueness: true
   validate :email_valid?
