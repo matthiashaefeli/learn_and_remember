@@ -2095,6 +2095,55 @@
           null
         ]
       },
+      "/Users/matyou/Documents/projects/personal/learn_and_remember/spec/mailers/remember_mailer_spec.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/matyou/Documents/projects/personal/learn_and_remember/app/mailers/remember_mailer.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/matyou/Documents/projects/personal/learn_and_remember/app/mailers/application_mailer.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
       "/Users/matyou/Documents/projects/personal/learn_and_remember/spec/mailers/verify_mailer_spec.rb": {
         "lines": [
           null,
@@ -2116,16 +2165,6 @@
           null,
           0,
           null,
-          null
-        ]
-      },
-      "/Users/matyou/Documents/projects/personal/learn_and_remember/app/mailers/application_mailer.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          1,
           null
         ]
       },
@@ -2323,6 +2362,7 @@
           1,
           1,
           null,
+          1,
           1,
           1,
           1,
@@ -2534,6 +2574,6 @@
         ]
       }
     },
-    "timestamp": 1647304499
+    "timestamp": 1647736323
   }
 }
