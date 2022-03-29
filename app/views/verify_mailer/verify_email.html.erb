@@ -7,6 +7,6 @@
     <p><a href="https://www.easyremindme.com/verify/<%= @user.verify_id %>" target="_blank">Click to Verify Email</a></p>
     <br />
     <br />
-    <p><a href='easyremindme@gmail.com'>easyremindme@gmail.com</a></p>
+    <p><%= mail_to 'easyremindme@gmail.com', "easyremindme@gmail.com" %></p>
   </body>
 </html>
