@@ -18,3 +18,9 @@ task year_reminder: :environment do
   YearRememberJob.perform_now
   puts 'done'
 end
+
+task report: :environment do
+  puts 'Daily report'
+  ReportJob.perform_now
+  puts 'done'
+end
