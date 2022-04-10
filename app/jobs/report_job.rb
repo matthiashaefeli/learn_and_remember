@@ -2,22 +2,23 @@
 
 class ReportJob < ApplicationJob
   def perform
-    status_cero_skills = Skill.where(status: 0).count
-    status_one_skills = Skill.where(status: 1).count
-    status_two_skills = Skill.where(status: 2).count
+    cero_skills_count = Skill.where(status: 0).count
+    one_skills_count = Skill.where(status: 1).count
+    two_skills_count = Skill.where(status: 2).count
     start_date = DateTime.now.beginning_of_day
     end_date = DateTime.now.end_of_day
-    new_skills = Skill.where('skills.created_at BETWEEN ? AND ?', start_date, end_date).count
-    users = User.count
-    new_users = User.where('users.created_at BETWEEN ? AND ?', start_date, end_date).count
+    new_skills_count = Skill.where('skills.created_at BETWEEN ? AND ?', start_date, end_date).count
+    users_count = User.count
+    new_users_count = User.where('users.created_at BETWEEN ? AND ?', start_date, end_date).count
     report = {
-      cero_skills: status_cero_skills,
-      one_skills: status_one_skills,
-      two_skills: status_two_skills,
-      new: new_skills,
-      users_total: users,
-      users_new: new_users
+      cero_skills: cero_skills_count,
+      one_skills: one_skills_count,
+      two_skills: two_skills_count,
+      new_skills: new_skills_count,
+      users_total: users_count,
+      new_users: new_users_count
     }
-    ReportMailer.daily_report(report).deliver_later
+
+    ReportMailer.daily_report(report).deliver_now
   end
 end

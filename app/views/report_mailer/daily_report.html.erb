@@ -4,6 +4,10 @@
     <h1>Easy Remind Me</h1>
     <h3>Report</h3>
     <br>
-    <p>@report</p>
+    <ul>
+      <% @report.each do |k, v| %>
+        <li><%= k %>: <%= v %></li>
+      <% end %>
+    </ul>
   </body>
 </html>
