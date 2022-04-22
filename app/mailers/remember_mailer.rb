@@ -18,6 +18,7 @@ class RememberMailer < ApplicationMailer
   def yearly_remember_email(skill)
     @skill = skill
     @user = @skill.user
+    @year_number = DateTime.now.year = @skill.created_at.year
 
     mail(to: @user.email, subject: "Easy Remember Me: #{@year_number} Years ago")
   end
