@@ -8,12 +8,5 @@
     <br>
     <p><%= @skill.title %></p>
     <p>language: <%= @skill.language.label %></p>
-    <br />
-    <%= sanitize @skill.body %>
-    <br />
-    <p>Comments:</p>
-    <% @skill.comments.each do |comment| %>
-      <%= sanitize comment.body %>
-    <% end %>
   </body>
 </html>
